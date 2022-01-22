@@ -1,7 +1,7 @@
 " tabでスペースを挿入 
 set expandtab 
 " tabで挿入される文字幅 
-set softtabstop=2 
+set softtabstop=4
 " インデント幅 
 set shiftwidth=4 
 " yコピーがクリップボードに入る 
