@@ -1,4 +1,6 @@
 vim.keymap.set("i", "jj", "<esc>")
+-- ターミナルで Esc でノーマルモードに
+vim.keymap.set("t", "<esc>", [[<C-\><C-n>]])
 vim.opt.clipboard = "unnamedplus"
 -- 行末から次の行に & 行頭から前の行に
 vim.opt.whichwrap = "b,s,[,],<,>"
