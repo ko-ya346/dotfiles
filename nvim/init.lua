@@ -26,3 +26,38 @@ if vim.fn.has("win32") == 1 then
     vim.opt.shellquote = ""
     vim.opt.shellxquote = ""
 end
+--
+-- ←この下に置く
+vim.schedule(function()
+  vim.api.nvim_set_hl(0, "Comment", {
+    fg = "#a9b1d6",  -- 明るめ
+    italic = true,
+  })
+
+  vim.api.nvim_set_hl(0, "@comment", {
+    fg = "#a9b1d6",  -- 明るめ
+    italic = true,
+  })
+end)
+vim.schedule(function()
+  -- 行番号
+  vim.api.nvim_set_hl(0, "LineNr", {
+    fg = "#7aa2f7",
+  })
+
+  -- 現在行の番号
+  vim.api.nvim_set_hl(0, "CursorLineNr", {
+    fg = "#ff9e64",
+    bold = true,
+  })
+
+  -- 左の空白列（LSPアイコンとか出る所）
+  vim.api.nvim_set_hl(0, "SignColumn", {
+    bg = "NONE",
+  })
+
+  -- fold列
+  vim.api.nvim_set_hl(0, "FoldColumn", {
+    fg = "#565f89",
+  })
+end)
